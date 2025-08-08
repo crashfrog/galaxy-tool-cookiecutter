@@ -1,1 +1,0 @@
-### Installing {{ cookiecutter.project_name }} ###

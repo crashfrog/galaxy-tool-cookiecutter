@@ -1,0 +1,14 @@
+categories: [Tool]
+description: {{ cookiecutter.project_short_description }}
+name: {{ cookiecutter.__pkg_name }}
+owner: {{ cookiecutter.toolrepo_username }}
+exclude:
+ - test_data
+ - .git
+ - .gitignore
+ - .gitmodules
+ - README.md
+ - tool_test_output.html
+ - tool_test_output.json
+ - .python-version
+ - job_conf_sample.yml

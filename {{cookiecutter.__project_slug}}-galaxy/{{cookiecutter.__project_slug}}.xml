@@ -1,0 +1,37 @@
+<tool id="{{cookiecutter.__pkg_name}}" name="{{cookiecutter.project_name}}" version="{{cookiecutter.version}}" python_template_version="3.5" profile="21.05">
+    <description>a cool tool, not for fools</description>
+    <requirements>
+        <container type="docker">{{cookiecutter.project_source_repo|replace("-","")|replace("https://github.com/","")|replace(".git","")|lower}}:{{cookiecutter.version}}</container>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        {{cookiecutter.__pkg_name}} -a -b --cee $input > $output
+    ]]></command>
+    <inputs>
+        <param type="data" name="input" format="fastqsanger,fastqsanger.gz,fastqsanger.bz2" />
+    </inputs>
+    <outputs>
+        <data name="output" format="fasta" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input" value="test/reads/input.fastq.gz" />
+            <output name="output" value="test/assemblies/output.fasta" />
+        </test>
+    </tests>
+    <help><![CDATA[
+        Some important help text.
+    ]]></help>
+    <citations>
+        <citation type="doi"></citation>
+        <citation type="bibtex">
+@misc{githubsometool,
+  author = {LastTODO, FirstTODO},
+  year = {TODO},
+  title = {sometool},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  url = {https://github.com/someuser/sometool},
+}</citation>
+        <citation type="text">Please cite the tool as described in the help text.</citation>
+    </citations>
+</tool>

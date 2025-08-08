@@ -1,14 +1,19 @@
 {
     "full_name": "",
     "email": "",
-    "github_username": "",
+    "toolrepo_username": "",
     "project_name": "",
-    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
-    "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}",
-    "project_shell_cmd": "{{ cookiecutter.project_slug|reject('in','aeiou')|join('') }}",
-    "use_logging":true,
-    "project_short_description": "A cool new project.",
+    "project_source_repo": "",
+    "__project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "__pkg_name": "{{ cookiecutter.__project_slug|replace('-', '') }}",
+    "project_short_description": "Galaxy wrapper for {{ cookiecutter.project_name }}.",
     "version": "0.1.0",
-    "create_author_file": "y",
-    "open_source_license": ["MIT license", "GNU General Public License v3", "Public domain", "US Government Work Product", "BSD license", "ISC license", "Apache Software License 2.0",  "Not open source"]
+    "__prompts__": {
+      "full_name": "Your full name",
+      "email": "Your email address",
+      "toolrepo_username": "Your username in the Galaxy tool repository",
+      "project_source_repo": "The URL of the source repository for your project (e.g., GitHub, GitLab)",
+      "project_name": "The titlecase name of the tool (spaces OK)",
+      "version": "Current release version of the tool"
+    }
   }
