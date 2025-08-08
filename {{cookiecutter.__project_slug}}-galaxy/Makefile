@@ -7,19 +7,19 @@ help:  ## Show this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  %-10s %s\n", $$1, $$2}'
 
-setup:  ## Set up development environment
+.setup_done:  ## Set up Planemo using pipx
 	@echo "Setting up development environment..."
 	pipx install planemo
 	@touch .setup_done
 
-test: setup  ## Run tests
+test: .setup_done  ## Run tests using Planemo
 	@echo "Running tests..."
-	planemo t --
+	planemo t --no_wait --galaxy_branch {{ cookiecutter.galaxy_release }} --skip_venv --biocontainers --job_config_file job_conf.yml --job_output_files ./.testing
 
-lint: setup ## Run linter
+lint: .setup_done ## Run Planemo's XML linter
 	@echo "Running linter..."
-	# Add your lint commands here
+	planemo l
 
-upload: setup ## Upload package
+upload: .setup_done ## Upload package to the toolshed using Planemo
 	@echo "Uploading package..."
-	# Add your upload commands here
+	planemo shed_update --shed_target toolrepo --force_repository_creation

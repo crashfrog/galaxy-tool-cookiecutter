@@ -8,12 +8,14 @@
     "__pkg_name": "{{ cookiecutter.__project_slug|replace('-', '') }}",
     "project_short_description": "Galaxy wrapper for {{ cookiecutter.project_name }}.",
     "version": "0.1.0",
+    "galaxy_release": "release_25.0",
     "__prompts__": {
       "full_name": "Your full name",
       "email": "Your email address",
       "toolrepo_username": "Your username in the Galaxy tool repository",
       "project_source_repo": "The URL of the source repository for your project (e.g., GitHub, GitLab)",
       "project_name": "The titlecase name of the tool (spaces OK)",
-      "version": "Current release version of the tool"
+      "version": "Current release version of the tool",
+      "galaxy_release": "The Galaxy release branch to target"
     }
   }
