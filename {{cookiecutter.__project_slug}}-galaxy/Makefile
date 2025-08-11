@@ -10,7 +10,7 @@ help:  ## Show this help message
 .setup_done:  ## Set up Planemo using pipx
 	@echo "Setting up development environment..."
 	pipx install planemo
-	@touch .setup_done
+	@planemo --help > .setup_done
 
 test: .setup_done  ## Run tests using Planemo
 	@echo "Running tests..."
