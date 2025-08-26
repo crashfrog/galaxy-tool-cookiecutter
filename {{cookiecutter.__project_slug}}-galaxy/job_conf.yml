@@ -22,7 +22,7 @@ execution:
       docker_set_user: root
 
 tools:
-- id: {{cookiecutter.__pkg_name}}
+- id: {{cookiecutter.__pkg_name}}{{cookiecutter.__exec_hint}}
   # handler: handler0
   environment: docker_local
 

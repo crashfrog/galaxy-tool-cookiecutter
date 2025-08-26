@@ -1,4 +1,4 @@
-<tool id="{{cookiecutter.__pkg_name}}" name="{{cookiecutter.project_name}}" version="{{cookiecutter.version}}" python_template_version="3.5" profile="21.05">
+<tool id="{{cookiecutter.__pkg_name}}{{cookiecutter.__exec_hint}}" name="{{cookiecutter.project_name}}" version="{{cookiecutter.version}}" python_template_version="3.5" profile="21.05">
     <description>a cool tool, not for fools</description>
     <requirements>
         <container type="docker">{{cookiecutter.project_source_repo|replace("-","")|replace("https://github.com/","")|replace(".git","")|lower}}:{{cookiecutter.version}}</container>

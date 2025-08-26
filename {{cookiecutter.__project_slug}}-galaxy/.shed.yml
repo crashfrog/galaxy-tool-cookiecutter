@@ -1,6 +1,6 @@
-categories: [Tool]
+categories: [Tools]
 description: {{ cookiecutter.project_short_description }}
-name: {{ cookiecutter.__pkg_name }}
+name: {{ cookiecutter.__pkg_name }}{{cookiecutter.__exec_hint}}
 owner: {{ cookiecutter.toolrepo_username }}
 exclude:
  - test-data/

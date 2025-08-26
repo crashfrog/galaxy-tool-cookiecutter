@@ -9,6 +9,8 @@
     "project_short_description": "Galaxy wrapper for {{ cookiecutter.project_name }}.",
     "version": "0.1.0",
     "galaxy_release": "release_25.0",
+    "exec_hints":[null, "cpu3mem14", "cpu7mem29", "cpu15mem59", "cpu23mem86", "cpu30mem115", "cpu47mem179", "cpu63mem239"],
+    "__exec_hint": "{{ '_' if cookiecutter.exec_hints }}{{ cookiecutter.exec_hints  }}",
     "__prompts__": {
       "full_name": "Your full name",
       "email": "Your email address",
@@ -16,6 +18,7 @@
       "project_source_repo": "The URL of the source repository for your project (e.g., GitHub, GitLab)",
       "project_name": "The titlecase name of the tool (spaces OK)",
       "version": "Current release version of the tool",
-      "galaxy_release": "The Galaxy release branch to target"
+      "galaxy_release": "The Galaxy release branch to target",
+      "exec_hints":"Optional resource allocation hint"
     }
   }
