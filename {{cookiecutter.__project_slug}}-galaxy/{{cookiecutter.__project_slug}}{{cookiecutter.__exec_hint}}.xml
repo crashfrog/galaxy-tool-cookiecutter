@@ -22,7 +22,7 @@
         Some important help text.
     ]]></help>
     <citations>
-        <citation type="doi"></citation>
+        <citation type="doi">XXXXX</citation>
         <citation type="bibtex">
 @misc{githubsometool,
   author = {LastTODO, FirstTODO},
@@ -32,6 +32,5 @@
   journal = {GitHub repository},
   url = {https://github.com/someuser/sometool},
 }</citation>
-        <citation type="text">Please cite the tool as described in the help text.</citation>
     </citations>
 </tool>
